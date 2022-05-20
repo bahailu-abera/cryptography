@@ -70,28 +70,6 @@ class Input:
             self.lbl.insert('1.0', "ecrypted message: "+ inp)
             self.outlbl.insert('1.0', "decrypted message: " + result)
 
-    def remove_space(self, txt):
-        message = str()
-
-        for i in range(len(txt)):
-            if (txt[i] == " "):
-                self.space_index.append(i)
-            else:
-                message += txt[i]
-        return message
-    def add_space(self, txt):
-        message = str()
-        ofset = 0
-        for i in range(len(txt)):
-            if (i + ofset) in self.space_index:
-                message += " "
-                ofset += 1
-            message += txt[i]
-        return message
-
-
-
-
 class Vigenere:
     ''' implementation of vigenere cipher encryption using python '''
 
